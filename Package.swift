@@ -43,6 +43,13 @@ let package = Package(
             resources: [
                 .copy("data")
             ]
+        ),
+        .target(
+            name: "NoUseLib",
+            dependencies: [],
+            resources: [
+                .copy("data")
+            ]
         )
     ]
 )
