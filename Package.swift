@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "SampleLib",
             targets: ["SampleLib", "InnerSampleLib"]),
+        .library(
+            name: "NoUseLib",
+            targets: ["NoUseLib"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
