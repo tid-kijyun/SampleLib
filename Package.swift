@@ -20,7 +20,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SampleLib",
-            dependencies: [],
+            dependencies: ["SampleLibKit"],
             resources: [
                 .copy("hoge1"),
                 .copy("hoge2")
@@ -30,11 +30,19 @@ let package = Package(
             name: "SampleLibTests",
             dependencies: ["SampleLib"]),
         .target(
-           name: "InnerSampleLib",
-           dependencies: [],
-           resources: [
-               .copy("fuga1")
-           ]
+            name: "InnerSampleLib",
+            dependencies: [],
+            resources: [
+                .copy("fuga1")
+            ]
+        ),
+        .target(
+            name: "SampleLibKit",
+            dependencies: [
+            ],
+            resources: [
+                .copy("data")
+            ]
         )
     ]
 )
